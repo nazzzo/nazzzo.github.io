@@ -1,1 +1,201 @@
-console.log("hello world")
+
+const checked1 = document.querySelector(".snb > li:nth-child(1)")
+const checked2 = document.querySelector(".snb > li:nth-child(2)")
+const checked3 = document.querySelector(".snb > li:nth-child(3)")
+
+
+checked1.addEventListener("click", function(e) {
+  checked1.className="checked"
+  checked2.className=""
+  checked3.className=""
+})
+
+checked2.addEventListener("click", function(e) {
+  checked1.className=""
+  checked2.className="checked"
+  checked3.className=""
+})
+
+checked3.addEventListener("click", function(e) {
+  checked1.className=""
+  checked2.className=""
+  checked3.className="checked"
+})
+
+
+
+// const checked = document.querySelectorAll('.snb > li');
+// checked.forEach( (li) => {
+//   li.addEventListener('click', function(e){
+//     li.className="checked"
+//   })
+// })
+
+
+
+// const elementList = document.querySelectorAll(".snb > li");
+// elementList.forEach((e, i, arr) => {
+// 	e.addEventListener("click", (event) => {
+//     	let target = event.target;
+//     	arr.forEach((e) => e.className = "");
+//         target.className = "checked";
+//     })
+// })
+
+
+
+
+const gnbPop =document.querySelectorAll(".gnb>li")
+
+
+
+
+
+
+
+
+const pop1 = document.querySelector(".pop_1 > p")
+const pop2 = document.querySelector(".pop_2 > p")
+
+
+const item1 = document.querySelector("#item_box1 > #box_item1")
+const item2 = document.querySelector("#item_box2 > #box_item2")
+const item3 = document.querySelector("#item_box2 > #box_item3")
+const item4 = document.querySelector("#item_box2 > #box_item4")
+const item5 = document.querySelector("#item_box2 > #box_item5")
+
+
+const vItem1 = document.querySelector("#video_item1")
+const vItem2 = document.querySelector("#video_item2")
+const vItem3 = document.querySelector("#video_item3")
+
+const rockey = document.querySelector("#rockey")
+
+const idol1 = document.querySelector("#idol_1")
+const idol2 = document.querySelector("#idol_2")
+const idol3 = document.querySelector("#idol_3")
+
+
+
+document.addEventListener('scroll', function(e){
+  if(window.pageYOffset > 400) {
+    pop1.className="h1_in"
+  }
+  else if (window.pageYOffset < 200) {
+    pop1.className="h1_out"
+  }
+  e.stopPropagation()
+})
+
+
+
+
+document.addEventListener("scroll", function (e) {
+  if (window.pageYOffset > 400) {
+    setTimeout(function(){
+      item1.className = "in";
+    },100)
+    setTimeout(function(){
+      item2.className = "in";
+    },300)
+    setTimeout(function(){
+      item3.className = "in";
+    },500)
+    setTimeout(function(){
+    item4.className = "in";
+  },700)
+    setTimeout(function(){
+    item5.className = "in";
+  },900)
+
+  } else if (window.pageYOffset < 300) {
+    item1.className = "out";
+    item2.className = "out";
+    item3.className = "out";
+    item4.className = "out";
+    item5.className = "out";
+  }
+  e.stopPropagation()
+});
+
+
+
+document.addEventListener('scroll', function(e){
+  if(window.pageYOffset > 1000) {
+    pop2.className="h1_in"
+  }
+  else if (window.pageYOffset < 500) {
+    pop2.className="h1_out"
+  }
+  e.stopPropagation()
+})
+
+
+
+document.addEventListener('scroll', function(e){
+  if (window.pageYOffset > 1000) {
+    setTimeout(function(){
+      vItem1.className = "in";
+    },100)
+    setTimeout(function(){
+      vItem2.className = "in";
+    },300)
+    setTimeout(function(){
+      vItem3.className = "in";
+    },500)
+  } else if (window.pageYOffset < 500) {
+    vItem1.className = "out";
+    vItem2.className = "out";
+    vItem3.className = "out";
+  }
+  e.stopPropagation()
+}); 
+
+
+
+document.addEventListener('scroll', function(e){
+  if(window.pageYOffset > 2500) {
+    rockey.className="in"
+  }
+  else if (window.pageYOffset < 1600) {
+    rockey.className="out"
+  }
+  e.stopPropagation()
+})
+
+
+document.addEventListener('scroll', function(e){
+  if (window.pageYOffset > 3000) {
+    setTimeout(function(){
+      idol1.className = "in";
+    },200)
+    setTimeout(function(){
+      idol2.className = "in";
+    },400)
+    setTimeout(function(){
+      idol3.className = "in";
+    },700)
+  } else if (window.pageYOffset < 2400) {
+    idol1.className = "out";
+    idol2.className = "out";
+    idol3.className = "out";
+  }
+  e.stopPropagation()
+}); 
+
+
+
+
+
+
+const toggleBtn = document.querySelector("#btn_toggle")
+
+let count = 1
+toggleBtn.addEventListener("click", function (e) {
+  count++
+  if (count%2 === 0) {
+    toggleBtn.className="on"
+    console.log(count)
+  } else 
+    toggleBtn.className=""
+})
