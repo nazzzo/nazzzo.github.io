@@ -1,3 +1,32 @@
+const v_btn = document.querySelector(".v1")
+const v_txt = document.querySelector(".v2")
+
+v_btn.addEventListener ("click", function (e){
+  v_btn.classList.toggle("v_checked")
+})
+v_txt.addEventListener ("click", function (e){
+  v_btn.classList.toggle("v_checked")
+})
+
+
+
+const x_btn = document.querySelector(".x_btn")
+const conf_btn = document.querySelector(".conf_btn")
+const layer = document.querySelector(".layer_bg")
+const popup = document.querySelector(".layer_popup")
+
+x_btn.addEventListener("click", function (e) {
+  layer.className="layer_off"
+  popup.className="layer_off"
+})
+conf_btn.addEventListener("click", function (e) {
+  layer.className="layer_off"
+  popup.className="layer_off"
+})
+
+
+
+
 
 const checked1 = document.querySelector(".snb > li:nth-child(1)")
 const checked2 = document.querySelector(".snb > li:nth-child(2)")
@@ -189,13 +218,6 @@ document.addEventListener('scroll', function(e){
 
 
 const toggleBtn = document.querySelector("#btn_toggle")
-
-let count = 1
-toggleBtn.addEventListener("click", function (e) {
-  count++
-  if (count%2 === 0) {
-    toggleBtn.className="on"
-    console.log(count)
-  } else 
-    toggleBtn.className=""
+toggleBtn.addEventListener ("click", function (e){
+  toggleBtn.classList.toggle("on")
 })
