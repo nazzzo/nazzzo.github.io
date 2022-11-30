@@ -68,6 +68,7 @@ a {
     top: 18px;
 }
 
+
 .layer_popup > ul > li:last-child {
     position: relative;
 }
@@ -114,6 +115,10 @@ a {
 
 .conf_btn:hover {
     border: solid 1px #333;
+}
+
+.x_btn, .conf_btn .v1,.v2,.v_checked {
+    cursor: pointer;
 }
 
 #wrap {
@@ -636,16 +641,24 @@ a {
 #visual_bg > img {
     width:100%;
     overflow: hidden;
+    margin-bottom: -10px;
 }
 
 .bg_arrow {
     position: absolute;
-    bottom: 50px;
+    bottom: 60px;
     left: 50%;
+    animation : motion 0.5s /* 속도 */
+    linear 0s   /* 처음부터 끝까지 일정 속도로 진행 */
+    infinite alternate; /* 무한 반복 */
+}
+@keyframes motion {
+	0% {bottom: 60px;} /* 처음 위치 */
+	100% {bottom: 70px;} /* 마지막 위치 */
 }
 
 #visual_show {
-    width: 100%;
+    width: 1440px;
     height: 886px;
     margin: 0 auto;
     background-color: #000;
@@ -803,8 +816,8 @@ a {
     height: 272px;
     padding: 24px 32px;
     border-radius: 14px;
-    background: url(https://cdn.aitimes.kr/news/photo/202210/26208_39406_80.png) 0 0 no-repeat;
-    background-size: 100%;
+    background: url(https://i.ibb.co/kB9MJ4B/Snipaste-2022-11-30-08-21-00.png) 15px 20px no-repeat rgb(246,246,246);
+    background-size: 95%;
     margin-top: 15px;
     margin-left: 15px;
     position: relative;
@@ -1066,7 +1079,7 @@ a {
 
 .content_block1 > ul {
     width: 1440px;
-    height: 470px;
+    height: 390px;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -1076,33 +1089,230 @@ a {
 
 .content_block1 > ul > li {
     width: 468px;
-    margin-top: 220px;
+    margin-top: 140px;
     opacity: 0;
     transition: all 1.2s ease-out;
 }
 
 .content_block1 > ul > li.in {
-    margin-top: 160px;
+    margin-top: 80px;
     opacity: 1;
     transition: all 1.2s ease-out;
 }
 
 
 .content_block2 {
-    text-align: center;
     position: relative;
     width: 1440px;
     margin: 0 auto;
 }
 
 .content_block2 > p {
+    text-align: center;
     padding:200px 0 50px 0;
     font-size: 36px;
     font-weight: 700;
     line-height: 56px;
 }
 
+#btnBox {
+    position: relative;
+    width: 1440px;
+    height: 45px;
+    margin: 0 auto;
+    display: flex;
+    background: transparent;
+    justify-content:space-around;
+}
 
+.prev_btn > button {
+    position: absolute;
+    left: 300px;
+    min-width: 300px;
+    min-height: 50px;
+    border: 0;
+    outline: 0;
+    margin-top: 42px;
+    background: transparent;
+    text-align: right;
+    line-height: 50px;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+
+.next_btn > button {
+    position: absolute;
+    right:300px;
+    min-width: 300px;
+    min-height: 50px;
+    border: 0;
+    outline: 0;
+    margin-top: 42px;
+    background: transparent;
+    text-align: left;
+    line-height: 50px;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+
+
+
+#slideWrap {
+    position: relative;
+    width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+#slide {
+    width: 1440px;
+    height: 780px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: all 0.5s ease-out;
+}
+
+
+.txtSlide > ul {
+    position: absolute;
+    display: block;
+    width: 600px;
+    height: 45px;
+    line-height: 45px;
+    top: 0px;
+    left: 420px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.txtSlide > ul > li:nth-child(1), li:nth-child(3) {
+    color: #999;
+}
+
+
+
+
+#recommendItem, #samsungItem, #appleItem {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    width: 1440px;
+    height: 708px;
+}
+
+
+.leftItem {
+    width: 708px;
+    height: 708px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 30px 0 0 30px;
+    box-sizing: border-box;
+}
+
+.leftItem > a {
+    text-decoration: none;
+    color: #000;
+}
+
+.leftItem > a > span {
+    margin-top: 4px;
+    font-size: 20px;
+}
+
+.leftItem > a > p {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.leftItem > a > img {
+    display: block;
+    margin: 0 auto;
+}
+
+.rightItem {
+    width: 708px;
+    height: 708px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+.rightItem > li {
+    width: 342px;
+    height: 342px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.rightItem > li > a {
+    text-decoration: none;
+    color: #000;
+}
+
+.rightItem > li > a > span {
+    margin-top: 4px;
+    font-size: 20px;
+}
+
+.rightItem > li > a > p {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.rightItem > li > a > img {
+    display: block;
+    width: 175px;
+    height: 175px;
+    margin: 0 auto;
+}
+
+
+
+
+#slide > ul {
+    position: absolute;
+    transform: translateX(1440px);
+    z-index: 4;
+}
+#slide > ul.on {
+    transition: all 0.2s ease-out;
+    transform: translateX(0px);
+    z-index: 4;
+}
+#slide > ul.off {
+    transition: all 0.2s ease-out;
+    transform: translateX(-1440px);
+    z-index: 3;
+}
+#slide > ul.out {
+    transition: all 0.2s ease-out;
+    transform: translateX(1440px);
+    z-index: 2;
+}
+
+
+
+.content_block2 > span > a {
+    display: block;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    bottom: 0px;
+    padding: 48px 0 0 0;
+    text-align: center;
+}
 
 
 #footerA {
@@ -1115,7 +1325,7 @@ a {
     text-align: center;
     position: relative;
     width: 1440px;
-    margin: 0 auto;
+    margin: 100px auto 0 auto;
 }
 
 .footer_block1 > p {
@@ -1175,6 +1385,7 @@ a {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    background: #2D2926;
 }
 
 
