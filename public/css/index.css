@@ -135,28 +135,71 @@ a {
     height: 100%;
 }    
 
-#chat_bot > .bot_img {
+
+#chat_bot > .bot_icon {
+    width: 62px;
+    height: 62px;
+    line-height: 50px;
+    border-radius: 50%;
+    background: url(https://image.lguplus.com/static/pc-static/common/images/indv-biz/icon/quick-menu-octopus2.png) #fff 50% 50% no-repeat;
+    background-size: 100%;
     position: fixed;
     bottom: 10%;
     right: 10%;  
     z-index: 4;
+    cursor: pointer;
+    color: transparent;
 }
 
 
-#chat_bot > .bot_img > div {
-    width: 62px;
+
+
+#chat_bot > .bot_icon.on {
+    background: #e6007e;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+}
+
+#chat_bot > .bot_popup {
+    width: 200px;
+    height: 135px;
+    position: fixed;
+    margin-bottom: 70px;
+    bottom: 10%;
+    right: 10%;
+    z-index: 4;
+    transition: all .5s;
+    opacity: 0;  
+}
+
+#chat_bot > .bot_popup > li {
+    width: 200px;
     height: 62px;
-    border-radius: 50%;
-    background: url(https://image.lguplus.com/static/pc-static/common/images/indv-biz/icon/quick-menu-octopus2.png) #fff 50% 50% no-repeat;
-    background-size: 100%;
+    border-radius: 31px;
+    margin-bottom: 10px;
+    padding: 18px 59px 18px 24px;
+    color: #000;
+    font-size: 18px;
+    line-height: 22px;
+    background-color: #f5f5f5;
+    cursor: pointer;
 }
 
-#chat_bot > .bot_img > div.on {
-    background-color: #e6007e;
+#chat_bot > .bot_popup > li > img {
+    display: block;
+    margin-left: 120px;
+    margin-top: -30px;
+}
+
+#chat_bot > .bot_popup.on {
+    display: block;
+    transition: all .5s;
+    opacity: 1;
 }
 
 #quick_btn {
-    margin-top: 72px;
+    margin-top: 22px;
     width: 62px;
     height: 34px;
     transform: rotate(180deg);

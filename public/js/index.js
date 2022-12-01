@@ -1,3 +1,4 @@
+// 팝업창
 const v_btn = document.querySelector(".v1")
 const v_txt = document.querySelector(".v2")
 
@@ -26,7 +27,7 @@ conf_btn.addEventListener("click", function (e) {
 
 
 
-
+// 헤더 버튼
 
 const checked1 = document.querySelector(".snb > li:nth-child(1)")
 const checked2 = document.querySelector(".snb > li:nth-child(2)")
@@ -72,7 +73,7 @@ checked3.addEventListener("click", function(e) {
 // })
 
 
-
+// 스크롤 이벤트
 
 const pop1 = document.querySelector(".pop_1 > p")
 const pop2 = document.querySelector(".pop_2 > p")
@@ -94,25 +95,6 @@ const rockey = document.querySelector("#rockey")
 const idol1 = document.querySelector("#idol_1")
 const idol2 = document.querySelector("#idol_2")
 const idol3 = document.querySelector("#idol_3")
-
-
-
-const quick = document.querySelector("#quick_btn")
-
-
-document.addEventListener('scroll', function(e){
-  if(window.pageYOffset > 100) {
-    quick.className="on"
-  }
-  else if (window.pageYOffset < 100) {
-    quick.className=""
-  }
-  e.stopPropagation()
-})
-
-
-
-
 
 
 
@@ -224,12 +206,8 @@ document.addEventListener('scroll', function(e){
 
 
 
-const toggleBtn = document.querySelector("#btn_toggle")
-toggleBtn.addEventListener ("click", function (e){
-  toggleBtn.classList.toggle("on")
-})
 
-
+// 슬라이더 메뉴
 const items = document.querySelectorAll("#slide > ul")
 const prevBtn = document.querySelector(".prev_btn > button")
 const nextBtn = document.querySelector(".next_btn > button")
@@ -295,3 +273,39 @@ let count = 0
 
     prevBtn.addEventListener("click", prevHandler)
     nextBtn.addEventListener("click", nextHandler)
+
+
+// footer 토글 버튼
+
+const toggleBtn = document.querySelector("#btn_toggle")
+toggleBtn.addEventListener ("click", function (e){
+  toggleBtn.classList.toggle("on")
+})
+
+
+
+
+// 챗봇
+
+const chatbot = document.querySelector("#chat_bot > .bot_icon")
+const botPop = document.querySelector("#chat_bot > .bot_popup")
+
+
+chatbot.addEventListener('click', function (e) {
+  chatbot.classList.toggle("on")
+  botPop.classList.toggle("on")
+})
+
+
+const quick = document.querySelector("#quick_btn")
+
+document.addEventListener('scroll', function(e){
+  if(window.pageYOffset > 100) {
+    quick.className="on"
+  }
+  else if (window.pageYOffset < 100) {
+    quick.className=""
+  }
+  e.stopPropagation()
+})
+
