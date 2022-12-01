@@ -74,15 +74,6 @@ checked3.addEventListener("click", function(e) {
 
 
 
-const gnbPop =document.querySelectorAll(".gnb>li")
-
-
-
-
-
-
-
-
 const pop1 = document.querySelector(".pop_1 > p")
 const pop2 = document.querySelector(".pop_2 > p")
 
@@ -103,6 +94,25 @@ const rockey = document.querySelector("#rockey")
 const idol1 = document.querySelector("#idol_1")
 const idol2 = document.querySelector("#idol_2")
 const idol3 = document.querySelector("#idol_3")
+
+
+
+const quick = document.querySelector("#quick_btn")
+
+
+document.addEventListener('scroll', function(e){
+  if(window.pageYOffset > 100) {
+    quick.className="on"
+  }
+  else if (window.pageYOffset < 100) {
+    quick.className=""
+  }
+  e.stopPropagation()
+})
+
+
+
+
 
 
 

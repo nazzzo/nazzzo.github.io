@@ -9,6 +9,10 @@ li {
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
 a {
     text-decoration: none;
 }
@@ -18,7 +22,7 @@ a {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.3);
-    z-index: 6;
+    z-index: 10;
     position: fixed;
 }
 
@@ -34,9 +38,9 @@ a {
     border-radius: 15px;
     background: #f5f5f5;
     position: fixed;
-    z-index: 7;
-    bottom: 50px;
-    left: 500px;
+    z-index: 11;
+    bottom: 10%;
+    left: 10%;
 }
 
 .layer_popup > ul {
@@ -110,7 +114,7 @@ a {
     font-size: 18px;
     position: absolute;
     right: 40px;
-    bottom: -5px;    
+    bottom: 0px;    
 }
 
 .conf_btn:hover {
@@ -123,6 +127,53 @@ a {
 
 #wrap {
     width: 100%;
+}
+
+
+#chat_bot {
+    width: 1440px;
+    height: 100%;
+}    
+
+#chat_bot > .bot_img {
+    position: fixed;
+    bottom: 10%;
+    right: 10%;  
+    z-index: 4;
+}
+
+
+#chat_bot > .bot_img > div {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: url(https://image.lguplus.com/static/pc-static/common/images/indv-biz/icon/quick-menu-octopus2.png) #fff 50% 50% no-repeat;
+    background-size: 100%;
+}
+
+#chat_bot > .bot_img > div.on {
+    background-color: #e6007e;
+}
+
+#quick_btn {
+    margin-top: 72px;
+    width: 62px;
+    height: 34px;
+    transform: rotate(180deg);
+    padding-bottom: 7px;
+    background: #ddd;
+    border-radius: 15px;
+    color: #000;
+    font-size: 22px;
+    border: 0;
+    outline: 0;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+
+#quick_btn.on {
+    opacity: 1;
+    transition: all 0.5s ease-out;
 }
 
 #header_line {
@@ -147,6 +198,7 @@ a {
 #logo_area {
     width: 1440px;
     height: 57px;
+    line-height: 57px;
     border-bottom: 1px solid #000;
     background-color: #000;
 }
@@ -186,7 +238,8 @@ a {
 .snb > .checked {
     border: 2px solid #333;
     width: 100%;
-    height: 100%;
+    height: 28px;
+    line-height: 20px;
     font-weight: 700;
     text-align: center;
     background-color: #fff;
@@ -233,8 +286,8 @@ a {
 }
 
 .gnb > li {
-    height: 60px;
-    padding-top: 20px;
+    height: 55px;
+    line-height: 55px;
 }
 
 .gnb > li > a {
@@ -246,7 +299,7 @@ a {
 .gnb > li > span {
     position: absolute;
     margin-left: 2px;
-    top: 64px;
+    bottom: 10px;
 }
 
 
@@ -254,39 +307,39 @@ a {
     content: "";
     position: absolute;
     width: 5000px;
-    height: 362px;
+    height: 350px;
     display: block;
     background: #fff;
     top: 114px;
     left: -1000px;
     box-shadow: 0 3px 6px rgb(0 0 0 / 10%);
-    z-index: 2;
+    z-index: 6;
 }
 
 .gnb > li:nth-child(2):hover::after {
     content: "";
     position: absolute;
     width: 5000px;
-    height: 452px;
+    height: 450px;
     display: block;
     background: #fff;
     top: 114px;
     left: -1000px;
     box-shadow: 0 3px 6px rgb(0 0 0 / 10%);
-    z-index: 2;
+    z-index: 6;
 }
 
 .gnb > li:nth-child(3):hover::after {
     content: "";
     position: absolute;
     width: 5000px;
-    height: 362px;
+    height: 350px;
     display: block;
     background: #fff;
     top: 114px;
     left: -1000px;
     box-shadow: 0 3px 6px rgb(0 0 0 / 10%);
-    z-index: 2;
+    z-index: 6;
 }
 
 
@@ -295,13 +348,13 @@ a {
     content: "";
     position: absolute;
     width: 5000px;
-    height: 362px;
+    height: 350px;
     display: block;
     background: #fff;
     top: 114px;
     left: -1000px;
     box-shadow: 0 3px 6px rgb(0 0 0 / 10%);
-    z-index: 2;
+    z-index: 6;
 }
 
 
@@ -310,13 +363,13 @@ a {
     content: "";
     position: absolute;
     width: 5000px;
-    height: 362px;
+    height: 350px;
     display: block;
     background: #fff;
     top: 114px;
     left: -1000px;
     box-shadow: 0 3px 6px rgb(0 0 0 / 10%);
-    z-index: 2;
+    z-index: 6;
 }
 
 
@@ -325,28 +378,27 @@ a {
     content: "";
     position: absolute;
     width: 5000px;
-    height: 302px;
+    height: 300px;
     display: block;
     background: #fff;
     top: 114px;
     left: -1000px;
     box-shadow: 0 3px 6px rgb(0 0 0 / 10%);
-    z-index: 2;
+    z-index: 6;
 }
 
 .gnb > li:nth-child(7):hover::after {
     content: "";
     position: absolute;
     width: 5000px;
-    height: 110px;
+    height: 70px;
     display: block;
     background: #fff;
     top: 114px;
     left: -1000px;
     box-shadow: 0 3px 6px rgb(0 0 0 / 10%);
-    z-index: 2;
+    z-index: 6;
 }
-
 
 
 
@@ -389,11 +441,11 @@ a {
     margin-left: 20px;
     width: 1440px;
     height: 293px;
-    z-index: 3;
+    z-index: 9;
 }
 
 .gnbPop > li {
-    margin-top: 15px;
+    margin-top: -25px;
     min-width: 180px;
     height: 253px;
 }
@@ -407,15 +459,16 @@ a {
     color: #000;
     font-size: 16px;
     font-weight: 400;
-    margin-bottom: 10px;
+}
+
+.snbPop > ul > li {
+    height: 28px;
+    line-height: 28px;
 }
 
 .snbPop > ul > li > a {
-    display: inline-block;
     color: #666;
     font-size: 14px;
-    height: 28px;
-    line-height: 28px;
 }
 
 .snbPop > ul > li > a::before {
@@ -434,24 +487,25 @@ a {
 .gnbPlus {
     width: 1440px;
     margin-left: 20px;
+    padding-bottom: 10px;
     display: flex;
     position: absolute;
     left: 0;
-    bottom: -340px;
-    z-index: 3;
-    border-top: 1px solid #666;
+    bottom: -350px;
+    z-index: 10;
+    border-top: 1px solid #ddd;
 }
 
 .gnbPlus.on2 {
-    bottom: -432px;
-    border-top: 1px solid #666;
+    bottom: -440px;
+    border-top: 1px solid #ddd;
 }
 
 
 .gnbPlus > li {
     display: flex;
     align-items: center;
-    padding-top: 25px;
+    padding-top: 15px;
 }
 
 
@@ -489,6 +543,7 @@ a {
     color: #ccc;
     width: 15px;
     height: 15px;
+    line-height: 14px;
     border-radius: 7.5px;
     text-align: center;
     font-size: 12px;
@@ -532,6 +587,7 @@ a {
 
 .info_login {
     height :81px;
+    line-height: 20px;
     border-bottom: 1px solid #eee;
 }
 
@@ -631,18 +687,46 @@ a {
     width:100%;
 }
 
+
 #visual_bg {
     text-align: center;
     position: relative;
     width: 1440px;
     margin: 0 auto;
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#visual_bg > img {
-    width:100%;
-    overflow: hidden;
-    margin-bottom: -10px;
+#visual_bg > .description > img {
+    margin-bottom: 20px;
 }
+
+.description > .cl-white > p {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 48px;
+    text-align: left;
+}
+
+.choice_btn {
+    float: left;
+    width: 140px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 20px;
+    color: #fff;
+    outline: 0;
+    border: 0;
+    background-color: #e6007e;
+}
+
+.choice_btn:hover {
+    background-color: #730024;
+}
+
+
 
 .bg_arrow {
     position: absolute;
@@ -656,6 +740,8 @@ a {
 	0% {bottom: 60px;} /* 처음 위치 */
 	100% {bottom: 70px;} /* 마지막 위치 */
 }
+
+
 
 #visual_show {
     width: 1440px;
@@ -675,7 +761,7 @@ a {
     color: #f000;
     text-align: center;
     font-size: 36px;
-    font-weight: 700;
+    font-weight: bold;
     margin-bottom: 50px;
     bottom : -30px;
     opacity: 0;
@@ -858,7 +944,7 @@ a {
 
 .p_item3 {
     margin-bottom: 8px;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 36px;
     color: #000;
     font-weight: 700;
@@ -1003,6 +1089,7 @@ a {
 
 
 #disney > p {
+    width: 1440px;
     padding: 100px 0;
     color: #fff;
     text-align: center;
@@ -1072,9 +1159,33 @@ a {
 .content_block1 > span > a {
     color: #000;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: bold;
     padding-top: 100px;
 }
+
+.content_block1 > ul > li > a {
+    position: relative;
+}
+
+.content_block1 > ul > li > a > span {
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    position: absolute;
+    left: 0px;
+    top: -260px;
+    left: 30px;
+}
+
+.content_block1 > ul > li > a > p {
+    color: #333;
+    font-size: 18px;
+    position: absolute;
+    top: -220px;
+    left: 30px;
+    text-align: left;
+}
+
 
 
 .content_block1 > ul {
@@ -1138,7 +1249,7 @@ a {
     line-height: 50px;
     font-size: 40px;
     cursor: pointer;
-    z-index: 5;
+    z-index: 4;
 }
 
 
@@ -1155,7 +1266,7 @@ a {
     line-height: 50px;
     font-size: 40px;
     cursor: pointer;
-    z-index: 5;
+    z-index: 4;
 }
 
 
@@ -1263,16 +1374,18 @@ a {
 
 .rightItem > li > a > span {
     margin-top: 4px;
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .rightItem > li > a > p {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
 }
 
 .rightItem > li > a > img {
     display: block;
+    padding-top: 40px;
     width: 175px;
     height: 175px;
     margin: 0 auto;
@@ -1284,22 +1397,22 @@ a {
 #slide > ul {
     position: absolute;
     transform: translateX(1440px);
-    z-index: 4;
+    z-index: 3;
 }
 #slide > ul.on {
     transition: all 0.2s ease-out;
     transform: translateX(0px);
-    z-index: 4;
+    z-index: 3;
 }
 #slide > ul.off {
     transition: all 0.2s ease-out;
     transform: translateX(-1440px);
-    z-index: 3;
+    z-index: 2;
 }
 #slide > ul.out {
     transition: all 0.2s ease-out;
     transform: translateX(1440px);
-    z-index: 2;
+    z-index: 1;
 }
 
 
@@ -1308,7 +1421,7 @@ a {
     display: block;
     color: #000;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: bold;
     bottom: 0px;
     padding: 48px 0 0 0;
     text-align: center;
@@ -1417,8 +1530,9 @@ a {
 
 #footer_menu > li::after {
     content: "|";
-    color: #ccc;
-    font-size: 14px;
+    color: #999;
+    font-size: 12px;
+    font-weight: 100;
     padding-left: 16px;
 }
 
@@ -1442,26 +1556,34 @@ a {
 
 
 #csList {
-    display: flex;
-    justify-content: space-around;
+    display: block;
     width: 1080px;
-    height: 22px;
     position: relative;
     left: -2px;
-    top: 35px;
+    top: 30px;
+}
+
+#csList > li {
+    float: left;
 }
 
 #csList > li > a {
+    display: inline-block;
+    height: 22px;
     color: #a7a7a7;
     font-weight: 100;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 #csList > li::after {
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
     content: "|";
     color: #a7a7a7;
-    font-size: 12px;
-    padding-left: 4px;
+    font-size: 10px;
+    padding: 0px 4px 0 4px;
+
 }
 
 #csList > li:last-child::after {
@@ -1481,7 +1603,7 @@ a {
     height: 22px;
     position: relative;
     left: 0px;
-    top: -160px;
+    top: -150px;
 }
 
 

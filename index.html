@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./public/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,7 +20,8 @@
                     <p>구글크롬캐스트 사전예약 이벤트</p>
                     <span class="x_btn"></span>
                 </li>
-                <li><img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20221118-114615-869-HXDR5hPK.jpg" alt="">
+                <li><img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20221118-114615-869-HXDR5hPK.jpg"
+                        alt="">
                 </li>
                 <li>
                     <span class="v_btn v1"></span>
@@ -28,6 +32,13 @@
         </div>
     </div>
     <div id="wrap">
+        <div id="chat_bot">
+            <a href="#" class="bot_img">
+                <div>
+                    <button id="quick_btn">⌵</button>
+                </div>
+            </a>
+        </div>
         <div id="header_line"></div>
         <div id="header">
             <div id="logo_area">
@@ -447,7 +458,7 @@
                             </ul>
                             <ul class="gnbPlus on5">
                                 <li><img src="https://image.lguplus.com/static/pc-contents/images/fcmm/fome/20220926-022936-084-4eYoUynL.png"
-                                        alt=""><a href="#">유플일상/a></li>
+                                        alt=""><a href="#">유플일상</a></li>
                                 <li><img src="https://image.lguplus.com/static/pc-contents/images/fcmm/fome/20221028-122225-362-EQo8S0g3.svg"
                                         alt=""><a href="#">일상비일상의틈</a></li>
                                 <li><img src="https://image.lguplus.com/static/pc-contents/images/fcmm/fome/20221004-051529-221-ClJn0bOt.png"
@@ -584,8 +595,22 @@
         </div>
         <div id="visual">
             <div id="visual_bg">
-                <img
-                    src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20221118-094359-577-xqqrDxUz.jpg">
+                <!-- <img
+                    src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20221118-094359-577-xqqrDxUz.jpg"> -->
+                <div class="description">
+                    <img src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/imge/20220929-042721-589-icy1tXBY.png"
+                        alt="">
+                    <div class="cl-white">
+                        <p>오직 유플러스에서만<br>
+                            Apple Watch SE 2세대 전액 할인</p>
+                    </div>
+                    <button class="choice_btn">온라인 구매</button>
+                </div>
+                <video ref="videoRef" autoplay="autoplay" loop="" name="media" class="visual-vod" muted="">
+                    <source
+                        src="https://image.lguplus.com/static/pc-contents/images/fcmm/cnts/video/20220930-011244-123-qGq0ywTt.mp4"
+                        alt="iphone">
+                </video>
                 <div class="bg_arrow">
                     <img src="https://image.lguplus.com/static/pc-contents/matching/images/main/mv-arrow.png" alt="">
                 </div>
@@ -679,15 +704,35 @@
                 생생하게 아이돌Live에서 즐겨보세요
             </p>
             <ul>
-                <li id="idol_1"><a href="#"><img
-                            src="https://image.lguplus.com/static/pc-contents/matching/images/main/promotion-app-idol-01.png"
-                            alt=""></a></li>
-                <li id="idol_2"><a href="#"><img
-                            src="https://image.lguplus.com/static/pc-contents/matching/images/main/promotion-app-idol-02.png"
-                            alt=""></a></li>
-                <li id="idol_3"><a href="#"><img
-                            src="https://image.lguplus.com/static/pc-contents/matching/images/main/promotion-app-idol-03.png"
-                            alt=""></a></li>
+                <li id="idol_1"><a href="#">
+                        <span>아돌라스쿨</span>
+                        <p>
+                            아이돌Live 오리지널 예능<br>
+                            <아돌라스쿨:홍보ON아이돌>
+                        </p>
+                        <img src="https://image.lguplus.com/static/pc-contents/matching/images/main/promotion-app-idol-01.png"
+                            alt="">
+                    </a></li>
+                <li id="idol_2"><a href="#">
+                        <span>본투비투비</span>
+                        <p>
+                            Born to beat!<br>
+                            비투비의 예능 신고식
+                        </p>
+                        <img src="https://image.lguplus.com/static/pc-contents/matching/images/main/promotion-app-idol-02.png"
+                            alt="">
+                    </a></li>
+                <li id="idol_3"><a href="#">
+                        <span>아이돌워크숍</span>
+                        <p>
+                            내 아이돌이 보여주는<br>
+                            사회생활의 모든 것!
+
+
+                        </p>
+                        <img src="https://image.lguplus.com/static/pc-contents/matching/images/main/promotion-app-idol-03.png"
+                            alt="">
+                    </a></li>
             </ul>
             <span><a href="#">U+아이돌 Live 바로가기 ></a></span>
         </div>
@@ -722,29 +767,33 @@
                             <li>
                                 <a href="#">
                                     <p>iPhone14 Pro_128</p>
-                                <span>월 133,180원</span>
-                                <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220929-091933-219-1oyubbOX.jpg" alt="">
+                                    <span>월 133,180원</span>
+                                    <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220929-091933-219-1oyubbOX.jpg"
+                                        alt="">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <p>갤럭시 S22</p>
-                                <span>월 109, 270원</span>
-                                <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220810-050335-443-wy20d2Cz.jpg" alt="">
+                                    <span>월 109, 270원</span>
+                                    <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220810-050335-443-wy20d2Cz.jpg"
+                                        alt="">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <p>갤럭시 Z Fold 4</p>
-                                <span>월 153,490원</span>
-                                <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220812-011331-152-1UnttTU4.jpg" alt="">
+                                    <span>월 153,490원</span>
+                                    <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220812-011331-152-1UnttTU4.jpg"
+                                        alt="">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <p>갤럭시 S22 Ultra</p>
-                                <span>월 129, 280원</span>
-                                <img src="https://image.lguplus.com/common/images/hphn/product/SM-S908N/imge_cut/ushop_SM-S908N_ER_A.jpg" alt="">
+                                    <span>월 129, 280원</span>
+                                    <img src="https://image.lguplus.com/common/images/hphn/product/SM-S908N/imge_cut/ushop_SM-S908N_ER_A.jpg"
+                                        alt="">
                                 </a>
                             </li>
                         </ul>
@@ -769,29 +818,33 @@
                             <li>
                                 <a href="#">
                                     <p>갤럭시 Z Fold 4</p>
-                                <span>월 153,490원</span>
-                                <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220812-011331-152-1UnttTU4.jpg" alt="">
+                                    <span>월 153,490원</span>
+                                    <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220812-011331-152-1UnttTU4.jpg"
+                                        alt="">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <p>갤럭시 S22</p>
-                                <span>월 109, 270원</span>
-                                <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220810-050335-443-wy20d2Cz.jpg" alt="">
+                                    <span>월 109, 270원</span>
+                                    <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220810-050335-443-wy20d2Cz.jpg"
+                                        alt="">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <p>갤럭시워치5 44mm</p>
-                                <span>월 20,430원</span>
-                                <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220812-041925-452-YTdWUIm6.jpg" alt="">
+                                    <span>월 20,430원</span>
+                                    <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220812-041925-452-YTdWUIm6.jpg"
+                                        alt="">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <p>U+키즈폰</p>
-                                <span>월 129, 280원</span>
-                                <img src="https://image.lguplus.com/common/images/hphn/product/SM-G525N-UK/imge_cut/ushop_SM-G525N-UK_67_A.jpg" alt="">
+                                    <span>월 129, 280원</span>
+                                    <img src="https://image.lguplus.com/common/images/hphn/product/SM-G525N-UK/imge_cut/ushop_SM-G525N-UK_67_A.jpg"
+                                        alt="">
                                 </a>
                             </li>
                         </ul>
@@ -807,37 +860,42 @@
                         <div class="leftItem">
                             <a href="#">
                                 <p>iPhone14 Pro_128</p>
-                            <span>월 133,180원</span>
-                            <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220929-091933-219-1oyubbOX.jpg" alt="">
+                                <span>월 133,180원</span>
+                                <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220929-091933-219-1oyubbOX.jpg"
+                                    alt="">
                             </a>
                         </div>
                         <ul class="rightItem">
                             <li>
                                 <a href="#">
                                     <p>iPhone14 Pro Max_256</p>
-                                <span>월 148,760원</span>
-                                <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220929-122404-549-RSqUOChb.jpg" alt="">
+                                    <span>월 148,760원</span>
+                                    <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220929-122404-549-RSqUOChb.jpg"
+                                        alt="">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <p>아이폰 13 mini 128G</p>
-                                <span>월 105, 630원</span>
-                                <img src="https://image.lguplus.com/common/images/hphn/product/A2628-128/imge_cut/ushop_A2628-128_67_A.jpg" alt="">
+                                    <span>월 105, 630원</span>
+                                    <img src="https://image.lguplus.com/common/images/hphn/product/A2628-128/imge_cut/ushop_A2628-128_67_A.jpg"
+                                        alt="">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <p>iPhone14 Pro_256</p>
-                                <span>월 126,850원</span>
-                                <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220929-092628-602-wptyUzy0.jpg" alt="">
+                                    <span>월 126,850원</span>
+                                    <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220929-092628-602-wptyUzy0.jpg"
+                                        alt="">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <p>iPhone14 Pro Max_256</p>
-                                <span>월 142, 430원</span>
-                                <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220929-121602-576-4M6D4tDs.jpg" alt="">
+                                    <span>월 142, 430원</span>
+                                    <img src="https://image.lguplus.com/static/pc-contents/images/prdv/20220929-121602-576-4M6D4tDs.jpg"
+                                        alt="">
                                 </a>
                             </li>
                         </ul>
