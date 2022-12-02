@@ -1,14 +1,24 @@
 // 팝업창
+
+
+const loadDay = new Date();
+const thisMinutes = loadDay.getMinutes()
+const thisDay = loadDay.getDate();
+console.log(thisMinutes)
+
 const v_btn = document.querySelector(".v1")
 const v_txt = document.querySelector(".v2")
 
 v_btn.addEventListener ("click", function (e){
   v_btn.classList.toggle("v_checked")
+  localStorage.setItem('today', thisDay);
+  localStorage.setItem('Minutes', thisMinutes);
 })
 v_txt.addEventListener ("click", function (e){
   v_btn.classList.toggle("v_checked")
+  localStorage.setItem('today', thisDay);
+  localStorage.setItem('Minutes', thisMinutes);
 })
-
 
 
 const x_btn = document.querySelector(".x_btn")
@@ -24,6 +34,21 @@ conf_btn.addEventListener("click", function (e) {
   layer.className="layer_off"
   popup.className="layer_off"
 })
+
+// 오늘 하루 다시 보지 않기
+// if (localStorage.getItem('today') == thisDay) {
+//   layer.className="layer_off"
+//   popup.className="layer_off"
+// }
+
+
+// 1분간 다시 보지 않기
+if (localStorage.getItem('Minutes') == thisMinutes) {
+  layer.className="layer_off"
+  popup.className="layer_off"
+}
+
+
 
 
 
@@ -53,24 +78,18 @@ checked3.addEventListener("click", function(e) {
 })
 
 
-
 // const checked = document.querySelectorAll('.snb > li');
-// checked.forEach( (li) => {
-//   li.addEventListener('click', function(e){
-//     li.className="checked"
+
+// for (let i = 1; i <= checked.length; i++ ) {
+//   checked[i].addEventListener("click", function(e) {
+//     checked[i].classList.toggle("checked")
 //   })
-// })
+// }
 
 
 
-// const elementList = document.querySelectorAll(".snb > li");
-// elementList.forEach((e, i, arr) => {
-// 	e.addEventListener("click", (event) => {
-//     	let target = event.target;
-//     	arr.forEach((e) => e.className = "");
-//         target.className = "checked";
-//     })
-// })
+
+
 
 
 // 스크롤 이벤트
@@ -78,132 +97,97 @@ checked3.addEventListener("click", function(e) {
 const pop1 = document.querySelector(".pop_1 > p")
 const pop2 = document.querySelector(".pop_2 > p")
 
-
-const item1 = document.querySelector("#item_box1 > #box_item1")
-const item2 = document.querySelector("#item_box2 > #box_item2")
-const item3 = document.querySelector("#item_box2 > #box_item3")
-const item4 = document.querySelector("#item_box2 > #box_item4")
-const item5 = document.querySelector("#item_box2 > #box_item5")
-
-
-const vItem1 = document.querySelector("#video_item1")
-const vItem2 = document.querySelector("#video_item2")
-const vItem3 = document.querySelector("#video_item3")
-
-const rockey = document.querySelector("#rockey")
-
-const idol1 = document.querySelector("#idol_1")
-const idol2 = document.querySelector("#idol_2")
-const idol3 = document.querySelector("#idol_3")
-
-
-
 document.addEventListener('scroll', function(e){
   if(window.pageYOffset > 400) {
-    pop1.className="h1_in"
+    pop1.className="in"
   }
   else if (window.pageYOffset < 200) {
-    pop1.className="h1_out"
+    pop1.className="out"
   }
-  e.stopPropagation()
 })
-
-
-
-
-document.addEventListener("scroll", function (e) {
-  if (window.pageYOffset > 400) {
-    setTimeout(function(){
-      item1.className = "in";
-    },100)
-    setTimeout(function(){
-      item2.className = "in";
-    },300)
-    setTimeout(function(){
-      item3.className = "in";
-    },500)
-    setTimeout(function(){
-    item4.className = "in";
-  },700)
-    setTimeout(function(){
-    item5.className = "in";
-  },900)
-
-  } else if (window.pageYOffset < 300) {
-    item1.className = "out";
-    item2.className = "out";
-    item3.className = "out";
-    item4.className = "out";
-    item5.className = "out";
-  }
-  e.stopPropagation()
-});
-
-
 
 document.addEventListener('scroll', function(e){
   if(window.pageYOffset > 1000) {
-    pop2.className="h1_in"
+    pop2.className="in"
   }
   else if (window.pageYOffset < 500) {
-    pop2.className="h1_out"
+    pop2.className="out"
   }
-  e.stopPropagation()
 })
 
 
 
+const itemBox = document.querySelectorAll("#box_item1, #item_box2 > div")
+
+
+
+for (let i = 0; i < itemBox.length; i++) {
+  document.addEventListener("scroll", function (e) {
+    if (window.pageYOffset > 500) {
+      setTimeout(function () {
+        itemBox[i].style.opacity = "1";
+        itemBox[i].style.transition = "all 0.8s ease-out";
+        itemBox[i].style.bottom = "0px";
+      }, 100 * (i + (i + 2)));
+    } else if (window.pageYOffset < 100) {
+      itemBox[i].style.opacity = "0";
+      itemBox[i].style.transition = "all 0.3s ease-out";
+      itemBox[i].style.bottom = "-50px";
+    }
+  });
+}
+
+
+
+
+const videoBox = document.querySelectorAll("#video_box > li")
+
+for (let i = 0; i < videoBox.length; i++) {
+  document.addEventListener('scroll', function (e) {
+      if (window.pageYOffset > 1200) {
+        setTimeout(function () {
+          videoBox[i].style.opacity = "1";
+          videoBox[i].style.transition = "all 1.2s ease-out";
+          videoBox[i].style.left = "-200px";
+        }, 100*(i+(i+1)))
+      } else if (window.pageYOffset < 800) {
+        videoBox[i].style.opacity = "0";
+        videoBox[i].style.transition = "all 0.2s ease-out";
+        videoBox[i].style.left = "0px";
+      }
+  });
+}
+
+
+const rockey = document.querySelector("#rockey")
+
 document.addEventListener('scroll', function(e){
-  if (window.pageYOffset > 1000) {
-    setTimeout(function(){
-      vItem1.className = "in";
-    },100)
-    setTimeout(function(){
-      vItem2.className = "in";
-    },300)
-    setTimeout(function(){
-      vItem3.className = "in";
-    },500)
-  } else if (window.pageYOffset < 500) {
-    vItem1.className = "out";
-    vItem2.className = "out";
-    vItem3.className = "out";
-  }
-  e.stopPropagation()
-}); 
-
-
-
-document.addEventListener('scroll', function(e){
-  if(window.pageYOffset > 2500) {
+  if(window.pageYOffset > 2300) {
     rockey.className="in"
   }
   else if (window.pageYOffset < 1600) {
     rockey.className="out"
   }
-  e.stopPropagation()
 })
 
 
-document.addEventListener('scroll', function(e){
-  if (window.pageYOffset > 3000) {
-    setTimeout(function(){
-      idol1.className = "in";
-    },200)
-    setTimeout(function(){
-      idol2.className = "in";
-    },400)
-    setTimeout(function(){
-      idol3.className = "in";
-    },700)
-  } else if (window.pageYOffset < 2400) {
-    idol1.className = "out";
-    idol2.className = "out";
-    idol3.className = "out";
-  }
-  e.stopPropagation()
-}); 
+const idolBox = document.querySelectorAll(".content_block1 > ul > li")
 
+for (let i = 0; i < idolBox.length; i++) {
+  document.addEventListener('scroll', function (e) {
+      if (window.pageYOffset > 3000) {
+        setTimeout(function () {
+          idolBox[i].style.opacity = "1";
+          idolBox[i].style.transition = "all 1.2s ease-out";
+          idolBox[i].style.margin = "80px 0 0 0";
+        }, 200*(i+2))
+      } else if (window.pageYOffset < 2400) {
+        idolBox[i].style.opacity = "0";
+        idolBox[i].style.transition = "all 1.2s ease-out";
+        idolBox[i].style.margin = "140px 0 0 0";
+      }
+  });
+}
 
 
 
@@ -269,10 +253,9 @@ let count = 0
         }
     }
 
-
-
     prevBtn.addEventListener("click", prevHandler)
     nextBtn.addEventListener("click", nextHandler)
+
 
 
 // footer 토글 버튼
@@ -281,8 +264,6 @@ const toggleBtn = document.querySelector("#btn_toggle")
 toggleBtn.addEventListener ("click", function (e){
   toggleBtn.classList.toggle("on")
 })
-
-
 
 
 // 챗봇
@@ -306,6 +287,5 @@ document.addEventListener('scroll', function(e){
   else if (window.pageYOffset < 100) {
     quick.className=""
   }
-  e.stopPropagation()
 })
 
