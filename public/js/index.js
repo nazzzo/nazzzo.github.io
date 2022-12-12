@@ -54,37 +54,41 @@ if (localStorage.getItem('Minutes') == thisMinutes) {
 
 // 헤더 버튼
 
-const checked1 = document.querySelector(".snb > li:nth-child(1)")
-const checked2 = document.querySelector(".snb > li:nth-child(2)")
-const checked3 = document.querySelector(".snb > li:nth-child(3)")
+// const checked1 = document.querySelector(".snb > li:nth-child(1)")
+// const checked2 = document.querySelector(".snb > li:nth-child(2)")
+// const checked3 = document.querySelector(".snb > li:nth-child(3)")
 
 
-checked1.addEventListener("click", function(e) {
-  checked1.className="checked"
-  checked2.className=""
-  checked3.className=""
+// checked1.addEventListener("click", function(e) {
+//   checked1.className="checked"
+//   checked2.className=""
+//   checked3.className=""
+// })
+
+// checked2.addEventListener("click", function(e) {
+//   checked1.className=""
+//   checked2.className="checked"
+//   checked3.className=""
+// })
+
+// checked3.addEventListener("click", function(e) {
+//   checked1.className=""
+//   checked2.className=""
+//   checked3.className="checked"
+// })
+
+
+const checked = document.querySelectorAll(".snb > li")
+
+checked.forEach(el => {
+  el.addEventListener("click", () => {
+    checked.forEach(el => {
+      el.className = ""
+    })
+    el.className = "checked"
+  })
 })
 
-checked2.addEventListener("click", function(e) {
-  checked1.className=""
-  checked2.className="checked"
-  checked3.className=""
-})
-
-checked3.addEventListener("click", function(e) {
-  checked1.className=""
-  checked2.className=""
-  checked3.className="checked"
-})
-
-
-// const checked = document.querySelectorAll('.snb > li');
-
-// for (let i = 1; i <= checked.length; i++ ) {
-//   checked[i].addEventListener("click", function(e) {
-//     checked[i].classList.toggle("checked")
-//   })
-// }
 
 
 
