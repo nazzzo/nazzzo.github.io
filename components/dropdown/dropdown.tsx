@@ -1,6 +1,5 @@
 import { DarkModeToggle } from "@components/common/button";
 import { DropDownWrapper, Button, MenuWrapper, TopContainer, NavContainer, NavLink } from "./styled/dropdown.styled";
-import { ShowBalance } from "@components/addressInfo";
 import { Icon } from '@iconify/react'
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
@@ -59,7 +58,6 @@ const DropDownMenu = ({ setIsOpenMenu }: MenuProps) => {
     return (
         <MenuWrapper ref={menuRef}>
             <TopContainer>
-                <ShowBalance />
             </TopContainer>
             <NavContainer>
                 <NavLink>

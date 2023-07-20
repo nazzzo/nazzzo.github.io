@@ -1,94 +1,33 @@
-import { useState, useEffect } from "react";
-import { useQuery } from "react-query";
-import request from "@utils/request";
-import { useMarket } from "@utils/hooks/useMarket";
-import { Hero, RankingChart, Collection, Slide } from "@components/main"
-import { LoadingSpinner2 } from "@components/common/loading";
-import { useEvent } from "@utils/hooks/useEvent";
-import { useCollection } from "@utils/hooks/useCollection";
+import { Button } from "@components/common/button"
+import { Animation } from "./animation"
+import Link from 'next/link'
+import { Icon } from "@iconify/react"
+import { HomeProps } from "@pages/index"
 
-const Main = () => {
-  const { market } = useMarket();
-  const [randomAddress, setRandomAddress] = useState<string | undefined>('');
-  const { getAllEvents } = useEvent();
-  const { getAllCollections } = useCollection()
-
-
-  const getNfts = async (collectionAddress: string) => {
-    try {
-      const response = await market.getAllTokensInCollection(collectionAddress);
-      const result = response.map((proxy: any) => {
-        const obj = {
-          id: Number(proxy[0]),
-          seller: proxy[1],
-          NFTaddress: proxy[2],
-          tokenId: Number(proxy[3]),
-          price: Number(proxy[4]),
-          metadata: proxy[5],
-          sold: proxy[6],
-          creatorFee: Number(proxy[7]),
-          openingPrice: Number(proxy[8]),
-          auctionEndTime: Number(proxy[9]),
-          highestBidder: proxy[10],
-          highestBid: Number(proxy[11]),
-        };
-        return obj;
-      });
-
-      return result;
-    } catch (error: unknown) {
-      throw new Error(error as string);
-    }
-  };
-
-  const { data: collectionDatas, isLoading: collectionLoading } = useQuery(
-    ["collection"],
-    () => getAllCollections(),
-    {
-      cacheTime: 60 * 24 * 1000,
-    },
-  );
-
-  const { data: activityDatas, isLoading: activityLoading } = useQuery(
-    ["event"],
-    () => getAllEvents(),
-    {
-      cacheTime: 60 * 24 * 1000,
-    },
-  );
-
-  const getRandomAddress = () => {
-    const randomIndex = Math.floor(Math.random() * collectionDatas!.length);
-    return collectionDatas![randomIndex]?.address;
-  };
-
-  const { data: tokenData, isLoading: nftsLoading } = useQuery(
-    ["nfts", randomAddress],
-    () => getNfts(randomAddress as string),
-    {
-      cacheTime: 60 * 24 * 1000,
-      enabled: !!market && !!randomAddress,
-    },
-  );
-
-  useEffect(() => {
-    if (!collectionLoading) {
-      const randomAddress = getRandomAddress();
-      setRandomAddress(randomAddress);
-    }
-  }, [collectionLoading]);
-
-  const isLoading = collectionLoading || nftsLoading || activityLoading;
-
-  if (isLoading || !collectionDatas) return <LoadingSpinner2 />
-  return (
-    <div className="mx-auto flex flex-col items-center">
-      <Hero />
-      <Slide tokenData={tokenData} />
-      <RankingChart collectionDatas={collectionDatas} activityDatas={activityDatas} />
-      <Collection collectionDatas={collectionDatas} />
-    </div>
-  );
-};
-
-export default Main;
+export const Main = ({ id }: HomeProps) => {
+    return (
+        <div id={id} className="flex flex-col md:flex-row items-center justify-between lg:w-3/4 mx-auto">
+            <div className="lg:flex-grow md:w-1/2 lg:ml-20 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 className="title-font sm:text-3xl text-3xl mb-4 font-medium text-gray-900 dark:text-gray-100">
+                    <p className="text-4xl block mb-2">안녕하세요</p>
+                    신입 블록체인 개발자 김주형입니다
+                </h1>
+                <p className="lg:mb-6 leading-relaxed">
+                    web3 기술, 그리고 프론트엔드와 백엔드를 포함한 <br></br>웹 개발 분야 전반에 관심이 많습니다
+                    <br></br>최근에는 NFT 마켓 플레이스를 제작 및 서비스 중입니다
+                </p>
+                <Button color="red" size="w-44">
+                    <Link href="https://roof-top.shop/">
+                        <div className="flex items-center justify-center">
+                            <Icon icon="ic:baseline-log-in" className="text-lg mr-2" />
+                            프로젝트 보러가기
+                        </div>
+                    </Link>
+                </Button>
+            </div>
+            <div className="lg:w-1/2">
+                <Animation />
+            </div>
+        </div>
+    )
+}

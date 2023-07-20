@@ -1,5 +1,0 @@
-export * from "./airdropbanner"
-export * from "./airdropupcoming"
-export * from "./airdroptimer"
-export * from "./airdropjoin"
-export * from "./airdroptargets"
