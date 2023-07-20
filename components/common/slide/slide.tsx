@@ -33,8 +33,8 @@ export const Slide = ({ images }: { images: string[] }) => {
             <SlideWrap>
                 <Slider {...settings}>
                     {images.map((image, index) => (
-                        <div className="h-[300px] overflow-hidden">
-                            <SlideItem key={index} image={image} />
+                        <div key={index} className="h-[300px] overflow-hidden">
+                            <SlideItem image={image} />
                         </div>
                     ))}
                 </Slider>

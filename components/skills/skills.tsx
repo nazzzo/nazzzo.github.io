@@ -98,7 +98,7 @@ const SkillCard = ({ color, data }: SkillCardProps) => {
                 </div>
                 <div className="flex flex-wrap justify-between items-center my-6">
                     {data.skills.map((skill, index) => (
-                        <div className="group">
+                        <div className="group" key={index}>
                             <div key={index} className="w-20 h-20 bg-gray-100 dark:bg-gray-500 hover:bg-gray-300 hover:dark:bg-gray-300 rounded-full flex items-center justify-center cursor-pointer">
                                 <img src={skill.img} alt={skill.name} className="w-12 h-12" />
                             </div>
