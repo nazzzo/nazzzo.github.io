@@ -4,15 +4,15 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import nextConfig from "../../../next.config";
 
-export const SlideWrap = tw.div`
-    
-`;
 
 
 const SlideItem = ({ image }: { image: string }) => {
+    const imageSrc = `${nextConfig.basePath}/project-images/${image}`
+
     return (
-        <Image src={image} alt="slide image" width={1000} height={450} className="h-full rounded-t-xl object-contain" />
+        <Image src={imageSrc} alt="slide image" width={1000} height={450} className="h-full rounded-t-xl object-contain" />
     );
 };
 
@@ -30,7 +30,7 @@ export const Slide = ({ images }: { images: string[] }) => {
 
     return (
         <>
-            <SlideWrap>
+            <div>
                 <Slider {...settings}>
                     {images.map((image, index) => (
                         <div key={index} className="h-[300px] overflow-hidden">
@@ -38,7 +38,7 @@ export const Slide = ({ images }: { images: string[] }) => {
                         </div>
                     ))}
                 </Slider>
-            </SlideWrap>
+            </div>
         </>
     );
 };
