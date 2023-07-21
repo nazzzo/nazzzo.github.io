@@ -27,7 +27,7 @@ const projects = [
         id: 3,
         title: '망고 마켓',
         description: '동네 인증을 필요로 하는 지역기반형 물물교환 플랫폼',
-        images: ['mango-0.png', 'mango-1.png', 'mango-2.png', 'mango-3.png','mango-4.png'],
+        images: ['mango-2.gif', 'mango-3.gif', 'mango-1.gif', 'mango-4.gif','mango-5.gif'],
         period: '2023/03 - 2023/03',
         github: 'https://github.com/nazzzo/mangomarket',
         hompage: 'https://mgmarket.store',
