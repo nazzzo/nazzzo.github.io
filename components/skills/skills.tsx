@@ -27,7 +27,7 @@ export const mySkills = [
             {
                 name: "NextJS",
                 img: "https://seeklogo.com/images/N/nextjs-logo-963D40B71E-seeklogo.com.png",
-                content: "SSR의 동작 원리를 파악하고 있고, 동적 라우팅을 써서 리액트 프로젝트를 마이그레이션한 경험이 있습니다"
+                content: "SSR에 대한 기본 지식이 있고, 동적 라우팅 설계를 할 수 있습니다. 다수의 리액트 프로젝트 경험이 있습니다"
             },
             {
                 name: "TypeScript",
@@ -49,7 +49,7 @@ export const mySkills = [
             {
                 name: "NestJS",
                 img: "https://seeklogo.com/images/N/nestjs-logo-09342F76C0-seeklogo.com.png",
-                content: "스웨거 Doc 작성, 각종 데코레이션 사용과 DTO를 통한 유효성 검사를 할 수 있습니다"
+                content: "Swagger Doc 작성, 각종 데코레이션 사용과 DTO를 통한 유효성 검사를 할 수 있습니다"
             },
             {
                 name: "MySQL",
@@ -76,7 +76,7 @@ export const mySkills = [
             {
                 name: "Truffle",
                 img: "https://seeklogo.com/images/T/truffle-logo-2DC7EBABF2-seeklogo.com.png",
-                content: "트러플 콘솔의 사용법과 배포를 포함한 기본적인 명령어를 파악하고 있습니다"
+                content: "사용법과 배포를 포함한 기본적인 명령어를 숙지하고 있습니다"
             },
             {
                 name: "Remix IDE",
