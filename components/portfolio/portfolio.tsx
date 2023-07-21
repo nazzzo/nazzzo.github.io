@@ -7,7 +7,7 @@ const projects = [
         id: 1,
         title: '루프탑(ROOFTOP)',
         description: '생성형 AI를 접목한 NFT 마켓 플레이스',
-        images: ['rooftop-1.png', 'rooftop-2.png', 'rooftop-3.png'],
+        images: ['rooftop-0.gif', 'rooftop-1.gif', 'rooftop-2.gif', 'rooftop-3.gif', 'rooftop-4.gif'],
         period: '2023/06 - 2023/07',
         github: 'https://github.com/nazzzo/rooftop-front',
         hompage: 'https://roof-top.shop/',
