@@ -37,7 +37,7 @@ const projects = [
         id: 4,
         title: 'IPK Blog',
         description: '소셜 로그인 기능과 마크다운 문법의 텍스트 작성을 지원하는 블로그 서비스',
-        images: ['ipk-1.png', 'ipk-2.png', 'ipk-3.png'],
+        images: ['ipk-0.gif', 'ipk-1.gif', 'ipk-2.gif', 'ipk-3.gif'],
         period: '2023/01 - 2023/02',
         github: 'https://github.com/nazzzo/ipk_board',
         hompage: 'https://mgmarket.store',
