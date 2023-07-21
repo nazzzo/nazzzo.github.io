@@ -92,7 +92,7 @@ export const mySkills = [
 const SkillCard = ({ color, data }: SkillCardProps) => {
     return (
         <div className={`${color} dark:bg-gray-900 rounded-xl hover:transform hover:scale-105 transition duration-300`}>
-            <div className="flex flex-col p-8 rounded-xl bg-white dark:bg-gray-800 shadow-xl translate-x-4 translate-y-4 w-96 lg:w-[320px]">
+            <div className="flex flex-col p-8 rounded-xl bg-white dark:bg-gray-800 shadow-xl translate-x-4 translate-y-4 w-[360px] lg:w-[320px]">
                 <div className="flex items-center justify-center">
                     <h2 className="ml-2 text-xl title-font font-medium mb-3">{data.title}</h2>
                 </div>

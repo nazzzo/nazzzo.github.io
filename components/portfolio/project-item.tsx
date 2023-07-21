@@ -27,8 +27,8 @@ export const ProjectItem = ({ data }: ProjectItemProps) => {
                 <h1 className="text-2xl font-bold">{title}</h1>
                 <h3 className="mt-4 text-md">{description}</h3>
                 <div className="flex items-center py-4 text-white">
-                    <div className="bg-red-400 hover:bg-orange-700 dark:bg-gray-800 dark:hover:bg-gray-500 w-[130px] p-2 flex items-center justify-center rounded-lg transition-all duration-150"><a href={github}>깃허브 바로가기</a></div>
-                    <div className="bg-red-400 hover:bg-orange-700 dark:bg-gray-800 dark:hover:bg-gray-500 w-[140px] p-2 ml-4 flex items-center justify-center rounded-lg transition-all duration-150"><a href={hompage}>홈페이지 바로가기</a></div>
+                    <div className="bg-red-400 hover:bg-orange-700 dark:bg-gray-800 dark:hover:bg-gray-500 px-4 py-2 flex items-center justify-center rounded-lg transition-all duration-150"><a href={github}>깃허브 바로가기</a></div>
+                    <div className="bg-red-400 hover:bg-orange-700 dark:bg-gray-800 dark:hover:bg-gray-500 px-4 py-2 ml-4 flex items-center justify-center rounded-lg transition-all duration-150"><a href={hompage}>홈페이지 바로가기</a></div>
                 </div>
                 <p className="my-1 ">
                     작업기간 : {period}

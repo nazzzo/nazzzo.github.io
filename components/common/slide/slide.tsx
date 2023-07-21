@@ -9,7 +9,7 @@ import nextConfig from "../../../next.config";
 
 
 const SlideItem = ({ image }: { image: string }) => {
-    const imageSrc = `${nextConfig.basePath}/project-images/${image}`
+    const imageSrc = `${nextConfig.basePath ? nextConfig.basePath : "https://nazzzo.github.io"}/project-images/${image}`
 
     return (
         <Image src={imageSrc} alt="slide image" width={1000} height={450} className="h-full rounded-t-xl object-contain" />
