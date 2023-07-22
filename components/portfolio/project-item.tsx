@@ -29,7 +29,7 @@ export const ProjectItem = ({ data }: ProjectItemProps) => {
                     className="py-1 px-3 bg-blue-500 dark:bg-red-500 hover:bg-blue-700 hover:bg-red-700 text-white font-bold rounded-md absolute top-[15px] right-[15px] cursor-pointer transition-all duration-200"
                     onClick={() => setShowDetails(!showDetails)} // Toggle the showDetails state on button click
                 >
-                    상세내용 보기
+                    상세설명 보기
                 </button>
 
             </div>
