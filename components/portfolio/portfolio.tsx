@@ -12,7 +12,7 @@ const projects = [
         github: 'https://github.com/nazzzo/rooftop-front',
         homepage: 'https://roof-top.shop/',
         skills: ['NextJS', 'NestJS', 'Solidity', 'TypeScript', 'ReactQuery', 'Tailwind', 'MongoDB'],
-        details: `API Doc : <a>https://nest-deploy-c764d61cc1b8.herokuapp.com/api</a>
+        details: `API Doc : https://nest-deploy-c764d61cc1b8.herokuapp.com/api
 
 뭄바이 네트워크를 기반으로 하는 NFT 마켓 플레이스입니다
 컬렉션 생성과 NFT 민팅 과정에서 이미지 생성 AI를 활용했고(Eden AI에서 제공하는 이미지 생성 API를 도입했습니다)
