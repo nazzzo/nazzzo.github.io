@@ -15,7 +15,8 @@ const projects = [
         details: `
 <h1 className="dark:text-white">ROOFTOP</h1>
 
----
+![rooftop-0](https://github.com/nazzzo/rooftop-front/assets/112994137/d1f2ef55-5774-4a70-bde3-c6e108a0e164)
+
 
 <h3 className="dark:text-white"> 프로젝트 소개 </h3>
 
