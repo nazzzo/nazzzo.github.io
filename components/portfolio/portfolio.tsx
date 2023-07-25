@@ -247,7 +247,7 @@ export const Portfolio = ({ id }: HomeProps) => {
         <div id={id} className="lg:w-4/5 mx-auto my-20">
             <div className="flex flex-col items-center justify-center min-h-screen px-3">
                 <div className="text-gray-800 dark:text-gray-200 text-center">
-                    <h1 className="title-font mb-3 text-4xl font-bold leading-10 tracking-tight sm:text-5xl sm:leading-none md:text-6xl hover:text-red-500 dark:hover:text-yellow-500 transition-all duration-300 cursor-pointer">Projects</h1>
+                    <h1 className="title-font mb-2 text-4xl font-bold leading-10 tracking-tight sm:text-5xl sm:leading-none md:text-6xl hover:text-red-500 dark:hover:text-yellow-500 transition-all duration-300 cursor-pointer">Projects</h1>
                     <div className="flex mt-6 justify-center">
                         <div className="w-44 md:w-56 lg:w-66 h-1 rounded-full bg-purple-500 dark:bg-indigo-500 inline-flex"></div>
                     </div>
