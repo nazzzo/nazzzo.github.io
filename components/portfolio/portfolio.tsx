@@ -172,15 +172,27 @@ NFT 구입과 판매, 장바구니와 Sweep 슬라이더를 통한 대량 구매
 
 - 동네인증 기능 구현을 위해 Geolocation API와 카카오 Map API를 사용했습니다.
 - 사용자가 위치한 좌표값을 DB에 저장한 뒤, MySQL에서 제공하는 ST_DISTANCE_SPHERE 함수로 반경을 계산해서 일정 범위 내에서 쓰인 게시글만 출력합니다.
-(사용자가 위치한 지역에서 최대 10km 밖의 글은 표시되지 않습니다.)
+(사용자가 위치한 지역에서 최대 10km 밖에서 등록된 글은 표시되지 않습니다.)
 
 ![mango-2](https://github.com/nazzzo/rooftop-front/assets/112994137/6a08ef6a-f535-484f-8144-0ef676ea5013)
 
 <br>
 
-> 2. <b className="dark:text-gray-300"> 채팅 </b>
+> 2. <b className="dark:text-gray-300"> 장터 등록 </b>
 
-- 채팅 기능 구현은 소켓 IO를 활용해서 구현했습니다.
+- 교환뭂품의 사진을 여러장 등록해서 자유롭게 썸네일을 선택할 수 있습니다.
+- 가전, 디지털기기 등 다양한 카테고리 설정이 가능합니다.
+- 상품의 제목과 해시태그는 검색 및 키워드 알림 기능에 활용됩니다.
+
+![mango-3](https://github.com/nazzzo/mangomarket/assets/112994137/cec3dcae-cb5d-4b75-9e61-3c8ff25179e6)
+
+<br>
+
+
+
+> 3. <b className="dark:text-gray-300"> 채팅 </b>
+
+- 소켓 IO를 통해 구현되었습니다.
 - 구매자의 유저 ID와 판매자의 게시글 인덱스를 묶어서 룸으로 설정합니다.
 - 채팅 메세지에도 카카오 맵 API를 호출해서 보다 간편하게 사용자간의 거래 약속을 잡을 수 있도록 구현했습니다.
 
