@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import { RootLayout } from "@components/layout/layout";
 import { Main } from "@components/main/main";
 import { Skills } from "@components/skills/skills";
-import { Portfolio } from "@components/portfolio/portfolio";
+import { Item } from "@components/items/item"
 
 export interface HomeProps {
   id: string;
@@ -12,9 +12,9 @@ const Home: NextPage = () => {
 
   return (
     <RootLayout id="contact">
-      <Main id="home" />
-      <Skills id="skills" />
-      <Portfolio id="portfolio" />
+      <Item />
+      {/* <Main id="home" /> */}
+      {/* <Skills id="skills" /> */}
     </RootLayout>
   );
 };

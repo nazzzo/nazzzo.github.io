@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   basePath: "https://nazzzo.github.io/",
   images: {
-    domains: ['127.0.0.1', 'localhost', 'nazzzo.github.io'],
+    domains: ['127.0.0.1', 'localhost', 'nazzzo.github.io','tbnws.hgodo.com'],
   },
 };
 

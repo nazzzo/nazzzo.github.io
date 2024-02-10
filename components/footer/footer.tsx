@@ -12,7 +12,7 @@ const Footer = ({id}: HomeProps) => {
         <footer id={id} className="bg-gray-100 dark:bg-gray-800 mt-20">
             <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
                 <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
-                    © 2023 - Kim Joo Hyung. All rights reserved.
+                    © 2024 - Kim Young Il, Kim Joo Hyung. All rights reserved.
                 </p>
                 <div className="flex sm:ml-auto sm:mt-0 mt-4">
                     <Link
@@ -21,13 +21,6 @@ const Footer = ({id}: HomeProps) => {
                     >
                         <Icon icon="bi:github" />
                         <span className="text-gray-500 ml-1 text-sm">Github</span>
-                    </Link>
-                    <Link
-                        href="https://velog.io/@kj_code00"
-                        className="text-gray-400 flex items-center pl-4 pr-1"
-                    >
-                        <Icon icon="simple-icons:velog" />
-                        <span className="text-gray-500 ml-1 text-sm">Velog</span>
                     </Link>
                     <Link
                         href=""

@@ -9,15 +9,12 @@ import nextConfig from "../../../next.config";
 
 
 const SlideItem = ({ image }: { image: string }) => {
-    const imageSrc = `${nextConfig.basePath ? nextConfig.basePath : "https://nazzzo.github.io"}/project-images/${image}`
-
     return (
-        <Image src={imageSrc} alt="slide image" width={1000} height={450} className="h-full rounded-t-xl object-contain" />
+        <Image src={image} alt="slide image" width={1000} height={450} className="h-full rounded-xl object-contain" />
     );
 };
 
 export const Slide = ({ images }: { images: string[] }) => {
-
     const settings = {
         infinite: true,
         speed: 1000,
@@ -33,7 +30,7 @@ export const Slide = ({ images }: { images: string[] }) => {
             <div>
                 <Slider {...settings}>
                     {images.map((image, index) => (
-                        <div key={index} className="h-[300px] overflow-hidden">
+                        <div key={index} className="overflow-hidden">
                             <SlideItem image={image} />
                         </div>
                     ))}

@@ -25,13 +25,16 @@ const Header = () => {
                         <Link href="#home">
                             <HeaderLink>Home</HeaderLink>
                         </Link>
-                        <Link href="#skills">
-                            <HeaderLink>Skills</HeaderLink>
+                        <Link href="">
+                            <HeaderLink>Switches</HeaderLink>
                         </Link>
-                        <Link href="#portfolio">
-                            <HeaderLink>Portfolio</HeaderLink>
+                        <Link href="">
+                            <HeaderLink>Keyboard</HeaderLink>
                         </Link>
-                        <Link href="#contact">
+                        <Link href="">
+                            <HeaderLink>Keycap</HeaderLink>
+                        </Link>
+                        <Link href="">
                             <HeaderLink>Contact</HeaderLink>
                         </Link>
                         <DarkModeToggle />
