@@ -54,7 +54,7 @@ export const Item = () => {
     return (
         <>
             <div className="container mx-auto px-8 xl:px-32">
-                <div className="lg:col-gap-12 xl:col-gap-16 mt-8 grid grid-cols-1 gap-12 lg:mt-12 lg:grid-cols-5 lg:gap-16">
+                <div className="lg:col-gap-12 xl:col-gap-16 mt-4 grid grid-cols-1 gap-12 lg:grid-cols-5 lg:gap-16">
                     <div className="lg:col-span-3 lg:row-end-1">
                         <div className="lg:flex lg:items-start">
                             <div className="lg:w-[576px]  overflow-hidden relative">
