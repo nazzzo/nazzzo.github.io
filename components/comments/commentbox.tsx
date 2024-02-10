@@ -90,14 +90,14 @@ export const CommentBox = () => {
                 <form className="mb-4">
                     <div className="py-2 px-4 bg-white rounded-lg rounded-t-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
                         <textarea id="comment"
-                            className="px-0 w-full text-sm text-gray-900 border-0 focus:ring-0 focus:outline-none dark:text-white dark:placeholder-gray-400 dark:bg-gray-800"
+                            className="px-0 w-full text-md text-gray-900 border-0 focus:ring-0 focus:outline-none dark:text-white dark:placeholder-gray-400 dark:bg-gray-800"
                             placeholder="내용을 입력해주세요">
                         </textarea>
                     </div>
-                    <div className="flex justify-end md:pt-4">
+                    <div className="flex justify-end md:pt-4 mb-10">
                         <Button color="red" size="w-32">
                             <div className="flex items-center justify-center font-bold text-md">
-                                <Icon icon="iconamoon:comment-add" className="text-lg mr-2" />
+                                <Icon icon="lets-icons:comment" className="text-xl mr-2" />
                                 등록하기
                             </div>
                         </Button>

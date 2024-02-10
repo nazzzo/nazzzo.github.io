@@ -40,7 +40,7 @@ export const Slide = ({ images }: { images: string[] }) => {
                 {images.map((image, index) => (
                     <div
                         key={index}
-                        className={`w-[60px] mx-1.5 mt-2 cursor-pointer ${currentSlide === index ? "opacity-100 rounded-md" : "opacity-50"
+                        className={`w-[66px] mx-1.5 mt-2 cursor-pointer ${currentSlide === index ? "opacity-100 rounded-md" : "opacity-50"
                             }`}
                         onClick={() => goToSlide(index)}
                     >

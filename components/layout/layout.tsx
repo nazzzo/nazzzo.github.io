@@ -12,7 +12,7 @@ export const RootLayout = ({ children, id }: { children: React.ReactNode, id:str
     return (
         <div className="flex flex-col min-h-screen justify-between">
             <Head>
-                <title>Hello Keyboard</title>
+                <title>Keyboard</title>
             </Head>
             <div>
                 <Header />
