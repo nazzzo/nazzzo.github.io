@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  basePath: "https://nazzzo.github.io/",
+  // basePath: "https://nazzzo.github.io/",
   images: {
     domains: ['127.0.0.1', 'localhost', 'nazzzo.github.io','tbnws.hgodo.com'],
   },
