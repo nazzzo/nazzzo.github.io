@@ -57,7 +57,7 @@ export const Item = () => {
                 <div className="lg:col-gap-12 xl:col-gap-16 mt-8 grid grid-cols-1 gap-12 lg:mt-12 lg:grid-cols-5 lg:gap-16">
                     <div className="lg:col-span-3 lg:row-end-1">
                         <div className="lg:flex lg:items-start">
-                            <div className="lg:w-[576px]  overflow-hidden rounded-lg relative">
+                            <div className="lg:w-[576px]  overflow-hidden relative">
                                 <Slide images={dummyItem().images} />
                             </div>
                         </div>
@@ -91,11 +91,11 @@ export const Item = () => {
                                 <h1 className="text-lg font-bold w-32">하우징</h1>
                                 <span className="text-md font-medium text-gray-600 dark:text-gray-400">{dummyItem().housing}</span>
                             </li>
-                            <li className="flex items-start text-left px-3">
+                            <li className="flex items-start text-left px-3 pt-5">
                                 <h1 className="text-lg font-bold w-32">주요 특징</h1>
                                 <div className="flex flex-wrap">
                                     {dummyItem().features.map((feature, index) => (
-                                        <span key={index} className="border border-dashed border-gray-400 rounded-full py-2 px-3 mr-2 mb-2 cursor-pointer">{feature}</span>
+                                        <span key={index} className="border border-dashed border-gray-400 rounded-full py-2 px-3 mr-2 mb-2 cursor-pointer hover:border-green-400">{feature}</span>
                                     ))}
                                 </div>
                             </li>
