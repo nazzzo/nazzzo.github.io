@@ -1,5 +1,4 @@
 import { Icon } from "@iconify/react"
-import { HomeProps } from "@pages/index"
 import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@components/common/button/button";

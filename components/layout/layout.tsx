@@ -4,11 +4,11 @@ import Head from 'next/head';
 
 const ContentLayout = ({ children }: { children: React.ReactNode }) => {
     // return <div className="pt-40">{children}</div>;
-    return <div className="pt-40 from-transparent to-[#] dark:to-[#] bg-cover bg-no-repeat before:absolute before:left-0 before:top-0 before:h-[320px] before:w-full before:bg-gradient-to-t">{children}</div>;
+    return <div className="pt-32 from-transparent to-[#] dark:to-[#] bg-cover bg-no-repeat before:absolute before:left-0 before:top-0 before:h-[320px] before:w-full before:bg-gradient-to-t">{children}</div>;
 
 };
 
-export const RootLayout = ({ children, id }: { children: React.ReactNode, id:string }) => {
+export const RootLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <div className="flex flex-col min-h-screen justify-between">
             <Head>
@@ -20,7 +20,7 @@ export const RootLayout = ({ children, id }: { children: React.ReactNode, id:str
                     <ContentLayout>{children}</ContentLayout>
                 </div>
             </div>
-            <Footer id={id} />
+            <Footer />
         </div>
     );
 };

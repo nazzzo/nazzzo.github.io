@@ -48,7 +48,7 @@ const Comment = ({ comment, parentCommentId }: { comment: CommentData, parentCom
     const isChildComment = parentCommentId && comment.commentId.startsWith(parentCommentId);
     
     return (
-        <div className={`p-6 mb-4 text-base bg-white rounded-lg dark:bg-gray-800 border-b border-gray-300 dark:border-gray-800 ${isSubComment ? 'ml-6' : ''}`}>
+        <div className={`p-6 mb-4 text-base rounded-lg dark:bg-gray-800 bg-gray-100 ${isSubComment ? 'ml-6' : ''}`}>
             <div className="flex justify-between items-center mb-2">
                 <div className="flex items-center">
                     <p className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white font-semibold">
@@ -61,7 +61,7 @@ const Comment = ({ comment, parentCommentId }: { comment: CommentData, parentCom
                     <p className="text-sm text-gray-600 dark:text-gray-400">{comment.createdAt.toDateString()}</p>
                 </div>
                 <button id={`dropdown${comment.commentId}Button`} data-dropdown-toggle={`dropdown${comment.commentId}`}
-                    className="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 dark:text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    className="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 dark:text-gray-400 bg-gray-100 rounded-lg hover:bg-white focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     type="button">
                     <Icon icon="tabler:dots" className="text-lg" />
                 </button>
