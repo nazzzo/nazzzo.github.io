@@ -1,5 +1,6 @@
 import { LoadingSpinner2 } from '@components/common/loading'
 import { Filter } from '@components/filter'
+import { ItemList } from '@components/items'
 import { RootLayout } from '@components/layout/layout'
 import request from '@utils/request'
 import { useQuery } from 'react-query'
@@ -28,6 +29,7 @@ const Db = () => {
     return (
         <RootLayout>
             <Filter />
+            <ItemList />
         </RootLayout>
     )
 }

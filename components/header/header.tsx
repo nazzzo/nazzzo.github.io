@@ -12,7 +12,7 @@ import { useScroll } from '@utils/hooks/useScroll'
 
 const dummyUser = {
     userName : "김주형",
-    userImg : "http://127.0.0.1:3000/default-image.png",
+    userImg : "https://nazzzo.github.io/default-image.png",
 }
 
 

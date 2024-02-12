@@ -16,7 +16,7 @@ type CommentData = {
 const dummyComments:CommentData[] = [
     {
         user: "farkhod",
-        userImg: "http://127.0.0.1:3000/default-image.png",
+        userImg: "https://nazzzo.github.io/default-image.png",
         boardId: 1,
         commentId: "1",
         comment: "댓글1 댓글1 댓글1 댓글1 댓글1 댓글1",
@@ -25,7 +25,7 @@ const dummyComments:CommentData[] = [
     }, 
     {
         user : "김주형",
-        userImg: "http://127.0.0.1:3000/default-image.png",
+        userImg: "https://nazzzo.github.io/default-image.png",
         boardId: 1,
         commentId: "2",
         comment : "댓글2 댓글2 댓글2 댓글2 댓글2 댓글2 댓글2 댓글2",
@@ -34,7 +34,7 @@ const dummyComments:CommentData[] = [
     },
     {
         user : "김희제",
-        userImg: "http://127.0.0.1:3000/default-image.png",
+        userImg: "https://nazzzo.github.io/default-image.png",
         boardId: 1,
         commentId: "1-1",
         comment : "대댓글1 대댓글1 대댓글1 대댓글1 대댓글1 대댓글1 대댓글1",
